@@ -20,12 +20,18 @@ class Products {
 
    
   
-
-    public function setSconto()
+    public function setSconto($user)
     {
-        if($this->has_discount = true) {
+        if($user->registered = true) {
+            $this->has_discount = true;
             $this->discount = 20;
         }
     }
 
+    public function getPrice()
+    {
+        return $this->price = $this->price -  ($this->price * $this->discount / 100);
+    }
+
 }
+

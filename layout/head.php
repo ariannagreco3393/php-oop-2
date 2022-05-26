@@ -10,4 +10,21 @@
 </head>
 
 <body>
- 
+    <h1>Pets Shop</h1>
+    <div class="container">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-4">
+            <?php foreach ($products as $product) : ?>
+                <div class="col">
+                    <div class="card">
+                        <div class="badge bg-primary position-absolute top-0 end-0">€<?= $product->price ?></div>
+                        <div class="card-body">
+                            <h3><?= $product->name ?></h3>
+                            <p><?= $product->description ?></p>
+                        </div>
+                    </div>
+                </div>
+            <?php endforeach ?>
+        </div>
+    </div>
+
+  
