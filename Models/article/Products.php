@@ -28,10 +28,6 @@ class Products {
         }
     }
 
-    public function getPrice()
-    {
-        return $this->price = $this->price -  ($this->price * $this->discount / 100);
-    }
 
 }
 

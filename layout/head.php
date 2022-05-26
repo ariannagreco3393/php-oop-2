@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    <h1>Pets Shop</h1>
+    <h1 class="text-center">Pets Shop</h1>
     <div class="container">
         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-4">
             <?php foreach ($products as $product) : ?>
