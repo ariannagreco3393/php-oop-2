@@ -18,14 +18,20 @@ class Products {
 
     }
 
-   
-  
+//se utente registrato discount diventa 20
     public function setSconto($user)
     {
         if($user->registered = true) {
             $this->has_discount = true;
             $this->discount = 20;
-        }
+        };
+    }
+
+    //settare il prezzo scontato moltiplicando il prezzo per 20 e dividerlo per 100
+
+    public function getPrice()
+    {
+        return $this->price = $this->price -  ($this->price * $this->discount / 100);
     }
 
 

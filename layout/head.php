@@ -16,7 +16,7 @@
             <?php foreach ($products as $product) : ?>
                 <div class="col">
                     <div class="card">
-                        <div class="badge bg-primary position-absolute top-0 end-0">€<?= $product->price ?></div>
+                        <div class="badge bg-primary position-absolute top-0 end-0">€<?= $product->getPrice() ?></div>
                         <div class="card-body">
                             <h3><?= $product->name ?></h3>
                             <p><?= $product->description ?></p>

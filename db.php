@@ -20,11 +20,25 @@ $products = [
 ];
 
 $users = [
-    "users_registered" => [
-        new Users(1, "Arianna", "arianna@gmail.com"),
-    ],
+    new Users(1, "Arianna", "arianna@example.com"),
 ];
 
+//con GET inserire login + utente registrato
 
-var_dump($products);
-var_dump($users);
+$login = $_GET["login"];
+
+$registered = false;
+
+//se login = Arianna applica lo sconto
+
+if ($login == $users[0]->name) {
+    $registered = true;
+}
+//se utente registrato applica sconto su tt i prodotti
+
+if ($registered == true) {
+    foreach ($products as $product) {
+        $product->setSconto($users[0]);
+    }
+ 
+}
