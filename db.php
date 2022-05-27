@@ -1,11 +1,12 @@
 
 <?php
-
+require_once __DIR__ . '/Models/traits.php';
 include_once __DIR__ . "/Models/article/Products.php";
 include_once __DIR__ . "/Models/article/Games.php";
 include_once __DIR__ . "/Models/article/Foods.php";
 include_once __DIR__ . "/Models/article/Accessories.php";
 include_once __DIR__ . "/Models/users/Users.php";
+
 
 $products = [
     new Foods(1, "crocchette al pollo", "proteiche e facilmente digeribili", 35),
